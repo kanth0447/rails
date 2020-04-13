@@ -14,7 +14,7 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: gem install sqlite3 -v '1.4.2' --source 'https://rubygems.org/'
+- script: sudo gem install sqlite3 -v '1.4.2' --source 'https://rubygems.org/'
   displayName: 'Sqlite Install'
   
 
