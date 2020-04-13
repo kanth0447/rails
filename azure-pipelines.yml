@@ -20,7 +20,7 @@ steps:
 # - script: sudo gem install rails && rails -v
 #   displayName: 'Rails Install'
 
-- script: sudo gem install buldler && sudo bundle install && rails s
+- script: sudo gem install bundler && sudo bundle install && rails s
   displayName: 'Server'
 
 # - script: |
