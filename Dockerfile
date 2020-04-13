@@ -8,3 +8,4 @@ RUN gem install sqlite3 -v '1.4.2' --source 'https://rubygems.org/'
 RUN yarn install --check-files
 RUN gem install bundler
 RUN bundle install
+ENTRYPOINT ["rails" , "s"]
