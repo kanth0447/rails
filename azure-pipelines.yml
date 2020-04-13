@@ -11,7 +11,7 @@ pool:
 
 steps:
 
-- script: echo Hello, world!
+- script: echo Hello, world! && ruby -v
   displayName: 'Run a one-line script'
 
 - script: sudo gem install sqlite3 -v '1.4.2' --source 'https://rubygems.org/'
