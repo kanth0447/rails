@@ -10,15 +10,24 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: AzureResourceGroupDeployment@2
+  displayName: 'Azure Deployment:Create Azure Container Registry'
+  inputs:
+    azureSubscription: EnvisagenicsSub
+    resourceGroupName: splicecoreContainer
+    location: 'East US'
+    csmFile: 'config/servers/azure/ArmTemplates/azure-container-template.json'
+    overrideParameters: '-registryName "splicecoreContainer" -registryLocation "East US" -registrySku "Standard"'
+    deploymentMode: Complete
 
-- script: echo Hello, world! && ruby -v
-  displayName: 'Run a one-line script'
 
-- script: sudo apt-get install libsqlite3-dev && sudo gem install sqlite3 -v '1.4.2' --source 'https://rubygems.org/'
-  displayName: 'Sqlite Install'
+# steps:
 
-- script: sudo yarn install --check-files
-  displayName: 'yarn packages update'
+# - script: sudo apt-get install libsqlite3-dev && sudo gem install sqlite3 -v '1.4.2' --source 'https://rubygems.org/'
+#   displayName: 'Sqlite Install'
+
+# - script: sudo yarn install --check-files
+#   displayName: 'yarn packages update'
   
 
 # - script: sudo apt update && sudo apt install ruby-full && ruby --version
@@ -27,8 +36,8 @@ steps:
 # - script: sudo gem install rails && rails -v
 #   displayName: 'Rails Install'
 
-- script: sudo gem install bundler && sudo bundle install && rails s
-  displayName: 'Server'
+# - script: sudo gem install bundler && sudo bundle install && rails s
+#   displayName: 'Server'
 
 # - script: |
 #     gem install bundler
