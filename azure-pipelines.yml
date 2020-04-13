@@ -17,10 +17,10 @@ steps:
 - script: sudo apt update && sudo apt install ruby-full && ruby --version
   displayName: 'Ruby Install'
 
-- script: sudo gem install rails && rails -v
-  displayName: 'Rails Install'
+# - script: sudo gem install rails && rails -v
+#   displayName: 'Rails Install'
 
-- script: sudo gem install buldler && bundle install && rails s
+- script: sudo gem install buldler && sudo bundle install && rails s
   displayName: 'Server'
 
 # - script: |
