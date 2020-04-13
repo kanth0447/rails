@@ -13,12 +13,12 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: chmod -R 777 /var/lib/gems/2.5.0
-  displayName: 'Gem Permission'
+- script: rails s
+  displayName: 'Server'
 
-- script: |
-    gem install bundler
-  displayName: 'bundle install'
+# - script: |
+#     gem install bundler
+#   displayName: 'bundle install'
 
-- script: bundle exec rake
-  displayName: 'bundle exec rake'
+# - script: bundle exec rake
+#   displayName: 'bundle exec rake'
