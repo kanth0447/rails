@@ -14,13 +14,13 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: apt update && apt install ruby-full && ruby --version
+- script: sudo apt update && sudo apt install ruby-full && ruby --version
   displayName: 'Ruby Install'
 
-- script: gem install rails && rails -v
+- script: sudo gem install rails && rails -v
   displayName: 'Rails Install'
 
-- script: gem install buldler && bundle install && rails s
+- script: sudo gem install buldler && bundle install && rails s
   displayName: 'Server'
 
 # - script: |
