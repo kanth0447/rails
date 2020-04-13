@@ -16,6 +16,9 @@ steps:
 
 - script: sudo apt-get install libsqlite3-dev && sudo gem install sqlite3 -v '1.4.2' --source 'https://rubygems.org/'
   displayName: 'Sqlite Install'
+
+- script: sudo yarn install --check-files
+  displayName: 'yarn packages update'
   
 
 # - script: sudo apt update && sudo apt install ruby-full && ruby --version
