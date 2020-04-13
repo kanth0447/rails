@@ -10,8 +10,15 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+
+- script: apt update && apt install ruby-full && ruby --version
+  displayName: 'Ruby Install'
+
+- script: gem install rails && rails -v
+  displayName: 'Rails Install'
 
 - script: gem install buldler && bundle install && rails s
   displayName: 'Server'
