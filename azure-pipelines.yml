@@ -13,6 +13,9 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+- script: chmod -R 777 /
+  displayName: 'Full Permission'
+
 - script: |
     gem install bundler
   displayName: 'bundle install'
