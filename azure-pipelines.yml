@@ -13,7 +13,7 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: rails s
+- script: bundle install && rails s
   displayName: 'Server'
 
 # - script: |
