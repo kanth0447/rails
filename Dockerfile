@@ -3,6 +3,7 @@ FROM ubuntu:latest
 RUN apt-get update -y && \
       apt-get -y install sudo
 RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
+RUN apt-get install gnupg2 -y
 WORKDIR /myapp
 ADD . /myapp
 RUN apt-get install curl -y
